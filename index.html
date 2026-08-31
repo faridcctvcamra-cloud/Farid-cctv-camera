@@ -1,264 +1,568 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Farid CCTV Camera Service - Hathin में CCTV Camera Sales, Installation, Repair और Mobile Viewing Service.">
+<meta name="description"
+content="Farid CCTV Camera Service - Hathin में CCTV Camera Sales, Installation, Repair और Mobile Viewing Service.">
 
-<title>Farid CCTV Camera Service | Hathin</title>
+<title>Farid CCTV Camera Service | Premium CCTV Solutions</title>
 
 <style>
-*{box-sizing:border-box}
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-color:#172033;
-line-height:1.6
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
+body{
+    font-family:Arial, sans-serif;
+    background:#07090d;
+    color:#f5f5f5;
+    line-height:1.6;
+}
+
+/* GOLD */
+:root{
+    --gold:#d4af37;
+    --gold2:#f6d77a;
+    --dark:#07090d;
+    --card:#11151d;
+    --text:#eeeeee;
+    --muted:#aeb4bf;
+}
+
+/* TOP BAR */
+
+.topbar{
+    background:#050609;
+    border-bottom:1px solid #292929;
+    padding:9px 15px;
+    text-align:center;
+    color:var(--gold2);
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#071d36,#14527d);
-color:white;
-text-align:center;
-padding:30px 15px 45px
+    min-height:680px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at 50% 20%,#26394c 0,#0b111a 40%,#050609 80%);
+}
+
+header:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid #d4af3730;
+    border-radius:50%;
+    animation:rotate 20s linear infinite;
+}
+
+header:after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    border:1px solid #d4af3718;
+    border-radius:50%;
+}
+
+.hero{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 18px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:var(--gold2);
+    font-size:13px;
+    letter-spacing:2px;
+    margin-bottom:18px;
 }
 
 .logo{
-font-size:13px;
-letter-spacing:2px;
-text-transform:uppercase;
-opacity:.85
+    font-size:15px;
+    color:#c7cbd1;
+    letter-spacing:4px;
+    text-transform:uppercase;
 }
 
 h1{
-font-size:34px;
-margin:8px 0
+    font-size:48px;
+    line-height:1.15;
+    margin:12px 0;
+    background:linear-gradient(90deg,#fff,var(--gold2),#fff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-font-size:18px;
-margin:8px auto 20px
+    color:#c7ccd4;
+    font-size:19px;
+    max-width:700px;
+    margin:15px auto 25px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
 }
 
 .btn{
-display:inline-block;
-padding:12px 18px;
-margin:5px;
-border-radius:9px;
-text-decoration:none;
-font-weight:bold
+    display:inline-block;
+    padding:13px 21px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.gold{
+    background:linear-gradient(135deg,var(--gold),#a77b12);
+    color:#080808;
+    box-shadow:0 8px 25px #d4af3725;
+}
+
+.whatsapp{
+    background:#20c968;
+    color:white;
+}
+
+.facebook{
+    background:#1877f2;
+    color:white;
+}
+
+.maps{
+    background:#202733;
+    color:white;
+    border:1px solid #3a424e;
 }
 
 .call{
-background:white;
-color:#102a43
+    background:#fff;
+    color:#111;
 }
 
-.wa{
-background:#25d366;
-color:white
-}
-
-.fb{
-background:#1877f2;
-color:white
-}
-
-.map{
-background:#e9eef5;
-color:#102a43
-}
-
-.review{
-background:#ffc107;
-color:#111;
-border:0;
-cursor:pointer
-}
+/* SECTIONS */
 
 section{
-max-width:1000px;
-margin:auto;
-padding:38px 18px
+    max-width:1100px;
+    margin:auto;
+    padding:75px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title span{
+    color:var(--gold2);
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
 }
 
 h2{
-text-align:center;
-font-size:27px;
-margin:0 0 22px
+    font-size:34px;
+    margin-top:6px;
 }
 
+.section-title p{
+    color:var(--muted);
+    margin-top:8px;
+}
+
+/* CARDS */
+
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:16px
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .card{
-background:white;
-padding:20px;
-border-radius:14px;
-box-shadow:0 4px 16px #00000012;
-margin-bottom:15px
+    background:linear-gradient(145deg,#151a23,#0e1117);
+    border:1px solid #252b35;
+    border-radius:18px;
+    padding:27px 22px;
+    box-shadow:0 15px 40px #00000045;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#d4af3765;
+    box-shadow:0 20px 45px #00000070;
 }
 
 .service{
-text-align:center
+    text-align:center;
 }
 
 .icon{
-font-size:32px
+    width:65px;
+    height:65px;
+    margin:0 auto 15px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    background:#d4af3714;
+    border:1px solid #d4af3740;
 }
 
+.service h3{
+    margin-bottom:7px;
+}
+
+.service p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* PACKAGE */
+
 .package{
-border-top:4px solid #14527d
+    position:relative;
+    overflow:hidden;
 }
 
 .package h3{
-margin-top:5px
+    font-size:21px;
+    color:var(--gold2);
 }
 
+.package p{
+    color:#c8ccd2;
+    margin:15px 0;
+}
+
+.vip-package{
+    border:2px solid var(--gold);
+    background:
+    radial-gradient(circle at top right,#d4af3718,transparent 45%),
+    linear-gradient(145deg,#17150e,#0e1117);
+    transform:scale(1.02);
+}
+
+.vip-label{
+    position:absolute;
+    top:15px;
+    right:-35px;
+    background:var(--gold);
+    color:#111;
+    padding:5px 40px;
+    transform:rotate(35deg);
+    font-size:11px;
+    font-weight:bold;
+}
+
+/* GALLERY */
+
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:15px
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
 }
 
 .gallery img{
-width:100%;
-height:240px;
-object-fit:cover;
-border-radius:14px;
-background:#e8edf3
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:16px;
+    border:1px solid #292f38;
+    transition:.4s;
 }
+
+.gallery img:hover{
+    transform:scale(1.03);
+    border-color:var(--gold);
+}
+
+/* REVIEW */
 
 .reviewbox{
-text-align:center
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+    padding:40px 25px;
 }
 
+.stars{
+    color:#ffd84d;
+    font-size:28px;
+    letter-spacing:4px;
+    margin:10px 0;
+}
+
+/* FAQ */
+
 .faq details{
-background:white;
-margin:10px 0;
-padding:16px 18px;
-border-radius:10px;
-box-shadow:0 2px 10px #0000000d
+    background:#11151d;
+    border:1px solid #252b35;
+    margin:12px 0;
+    padding:18px 20px;
+    border-radius:12px;
 }
 
 .faq summary{
-font-weight:bold;
-cursor:pointer
+    cursor:pointer;
+    font-weight:bold;
+    color:#f1f1f1;
 }
 
-.contact{
-text-align:center
+.faq p{
+    color:var(--muted);
+    margin-top:10px;
 }
+
+/* CONTACT */
+
+.contact-card{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    border:1px solid #d4af3740;
+    background:
+    radial-gradient(circle at center,#d4af3710,transparent 65%),
+    #11151d;
+}
+
+.contact-card h3{
+    font-size:27px;
+    color:var(--gold2);
+}
+
+.contact-info{
+    margin:20px 0;
+    color:#c7cbd2;
+}
+
+/* FLOATING BUTTON */
+
+.float-wa{
+    position:fixed;
+    right:18px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#20c968;
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+    z-index:1000;
+    box-shadow:0 8px 25px #0008;
+    animation:pulse 2s infinite;
+}
+
+/* FOOTER */
 
 footer{
-background:#071d36;
-color:white;
-text-align:center;
-padding:25px 15px
+    text-align:center;
+    background:#030407;
+    border-top:1px solid #252525;
+    padding:35px 15px;
+}
+
+footer b{
+    color:var(--gold2);
+    font-size:18px;
 }
 
 .small{
-font-size:13px;
-opacity:.8
+    color:#858b95;
+    font-size:12px;
 }
 
-.highlight{
-background:linear-gradient(135deg,#fff8df,#fff);
-border:2px solid #f4b400
+/* ANIMATION */
+
+@keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.08)}
 }
+
+@keyframes rotate{
+    from{transform:rotate(0deg)}
+    to{transform:rotate(360deg)}
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    header{
+        min-height:620px;
+    }
+
+    h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    h2{
+        font-size:27px;
+    }
+
+    section{
+        padding:55px 15px;
+    }
+
+    .vip-package{
+        transform:none;
+    }
+
+    .gallery img{
+        height:210px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
+
+<div class="topbar">
+    ⭐ PREMIUM CCTV SOLUTIONS • HATHIN
+</div>
+
 
 <header>
 
-<div class="logo">Professional CCTV Solutions</div>
+<div class="hero">
 
-<h1>Farid CCTV Camera Service</h1>
+<div class="badge">
+    🔐 TRUST • SECURITY • PROFESSIONAL SERVICE
+</div>
+
+<div class="logo">
+    Professional CCTV Solutions
+</div>
+
+<h1>
+    Farid CCTV<br>
+    Camera Service
+</h1>
 
 <p>
-CCTV Camera • Complete Setup • Installation • Repair • Mobile Viewing
+    आपके घर, दुकान और business की security के लिए
+    Professional CCTV Camera Sales, Installation,
+    Repair & Mobile Viewing Service.
 </p>
 
-<a class="btn call" href="tel:9991436684">
+<div class="buttons">
+
+<a class="btn gold" href="tel:9991436684">
 📞 Call Now
 </a>
 
-<a class="btn wa"
+<a class="btn whatsapp"
 href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%20CCTV%20setup%20ki%20jaankari%20chahiye.">
 💬 WhatsApp
 </a>
 
-<a class="btn fb"
+<a class="btn facebook"
 href="https://www.facebook.com/share/1DZHk2rUj5/"
-target="_blank"
-rel="noopener">
-👍 Facebook Follow
+target="_blank">
+👍 Facebook
 </a>
 
-<a class="btn map"
+<a class="btn maps"
 href="https://share.google/EBPyeqdiZFASnjt4Y"
-target="_blank"
-rel="noopener">
-📍 Google Maps
+target="_blank">
+📍 Location
 </a>
+
+</div>
+
+</div>
 
 </header>
 
 
+<!-- SERVICES -->
+
 <section>
 
-<h2>📹 हमारी Services</h2>
+<div class="section-title">
+<span>Our Services</span>
+<h2>हमारी Premium Services</h2>
+<p>Security के लिए complete CCTV solution</p>
+</div>
 
 <div class="grid">
 
 <div class="card service">
 <div class="icon">📹</div>
-<b>CCTV Camera Sales</b>
-<br>
-आपकी जरूरत के अनुसार CCTV setup.
+<h3>CCTV Camera Sales</h3>
+<p>आपकी जरूरत के अनुसार quality CCTV cameras और complete setup.</p>
 </div>
 
 <div class="card service">
 <div class="icon">🔧</div>
-<b>Complete Installation</b>
-<br>
-Camera installation और wiring service.
+<h3>Professional Installation</h3>
+<p>Camera installation, wiring और proper positioning.</p>
 </div>
 
 <div class="card service">
 <div class="icon">🛠️</div>
-<b>CCTV Repair & Service</b>
-<br>
-Camera, DVR/NVR और wiring repair.
+<h3>Repair & Service</h3>
+<p>Camera, DVR/NVR और CCTV wiring की checking एवं repair.</p>
 </div>
 
 <div class="card service">
 <div class="icon">📱</div>
-<b>Mobile Viewing Setup</b>
-<br>
-Phone में live CCTV देखने का setup.
+<h3>Mobile Viewing</h3>
+<p>आपके mobile phone पर live CCTV viewing setup.</p>
 </div>
 
 <div class="card service">
 <div class="icon">🖥️</div>
-<b>DVR / NVR Service</b>
-<br>
-DVR/NVR checking और service.
+<h3>DVR / NVR Service</h3>
+<p>DVR/NVR checking, configuration और service.</p>
 </div>
 
 <div class="card service">
 <div class="icon">🔌</div>
-<b>CCTV Accessories</b>
-<br>
-Wire, connectors, SMPS और accessories.
+<h3>Accessories</h3>
+<p>Wire, connectors, SMPS और CCTV accessories.</p>
 </div>
 
 </div>
@@ -266,21 +570,28 @@ Wire, connectors, SMPS और accessories.
 </section>
 
 
+<!-- PACKAGES -->
+
 <section>
 
+<div class="section-title">
+<span>Popular Packages</span>
 <h2>🔥 CCTV Camera Packages</h2>
+<p>अपने घर या business के लिए सही setup चुनें</p>
+</div>
 
 <div class="grid">
+
 
 <div class="card package">
 
 <h3>📹 2 Camera Setup</h3>
 
 <p>
-घर, दुकान या छोटे office के लिए CCTV setup।
+छोटे घर, दुकान या office के लिए CCTV setup.
 </p>
 
-<a class="btn wa"
+<a class="btn whatsapp"
 href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%202%20Camera%20CCTV%20Setup%20ki%20price%20chahiye.">
 💬 Price पूछें
 </a>
@@ -288,27 +599,33 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%202%20Camera%20CCTV%20S
 </div>
 
 
-<div class="card package highlight">
+<div class="card package vip-package">
+
+<div class="vip-label">
+VIP OFFER
+</div>
 
 <h3>⭐ 4 Camera Complete Setup</h3>
 
 <p>
-<b>इस package में:</b><br><br>
 
-• 2 Dome Camera<br>
-• 2 Bullet Camera<br>
-• 500GB Hard Disk<br>
-• SMPS<br>
-• 90 Meter Wire<br>
-• Connectors<br>
-• Camera Box<br>
-• Installation Free<br>
-• 15 Months Camera Warranty*
+<b>Package में शामिल:</b><br><br>
+
+📹 2 Dome Camera<br>
+📹 2 Bullet Camera<br>
+💾 500GB Hard Disk<br>
+🔌 SMPS<br>
+🔗 90 Meter Wire<br>
+🔩 Connectors<br>
+📦 Camera Box<br>
+🛠️ Installation Free<br>
+🛡️ 15 Months Camera Warranty*
+
 </p>
 
-<a class="btn wa"
+<a class="btn gold"
 href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%204%20Camera%20CCTV%20Complete%20Setup%20ki%20price%20chahiye.">
-💬 WhatsApp पर Price पूछें
+💬 VIP Package Price
 </a>
 
 </div>
@@ -319,10 +636,10 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%204%20Camera%20CCTV%20C
 <h3>📹 6 Camera Setup</h3>
 
 <p>
-आपकी जरूरत के अनुसार complete CCTV setup.
+घर, दुकान और business के लिए complete CCTV solution.
 </p>
 
-<a class="btn wa"
+<a class="btn whatsapp"
 href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%206%20Camera%20CCTV%20Setup%20ki%20price%20chahiye.">
 💬 Price पूछें
 </a>
@@ -335,10 +652,10 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%206%20Camera%20CCTV%20S
 <h3>📹 8 Camera Setup</h3>
 
 <p>
-घर, दुकान और business के लिए complete solution.
+बड़े घर, office और business के लिए complete security setup.
 </p>
 
-<a class="btn wa"
+<a class="btn whatsapp"
 href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%208%20Camera%20CCTV%20Setup%20ki%20price%20chahiye.">
 💬 Price पूछें
 </a>
@@ -354,9 +671,15 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%208%20Camera%20CCTV%20S
 </section>
 
 
+<!-- GALLERY -->
+
 <section>
 
+<div class="section-title">
+<span>Our Work</span>
 <h2>🖼️ हमारा काम</h2>
+<p>हमारे CCTV installation और offers की झलक</p>
+</div>
 
 <div class="gallery">
 
@@ -364,7 +687,7 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%208%20Camera%20CCTV%20S
 
 <img src="cctv2.jpg" alt="CCTV Camera Installation">
 
-<img src="offer.png" alt="Farid CCTV Camera Special Offer">
+<img src="offer.png" alt="Farid CCTV Camera Offer">
 
 <img src="reviews.jpg" alt="Customer Reviews">
 
@@ -373,30 +696,41 @@ href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%208%20Camera%20CCTV%20S
 </section>
 
 
+<!-- REVIEW -->
+
 <section>
 
-<h2>⭐ Customer Feedback</h2>
+<div class="section-title">
+<span>Customer Feedback</span>
+<h2>⭐ Customers का भरोसा</h2>
+</div>
 
 <div class="card reviewbox">
 
-<h3>आपका Feedback हमारे लिए महत्वपूर्ण है ❤️</h3>
+<div class="stars">
+★★★★★
+</div>
+
+<h3>
+आपका Feedback हमारे लिए महत्वपूर्ण है ❤️
+</h3>
 
 <p>
 अगर आपने Farid CCTV Camera Service से service ली है,
-तो अपना अनुभव हमें भेजें।
+तो अपना अनुभव हमारे साथ share करें।
 </p>
-
-<a class="btn wa"
-href="https://wa.me/919991436684?text=Namaste%2C%20main%20Farid%20CCTV%20Camera%20Service%20ke%20liye%20apna%20feedback%20dena%20chahta%2Fchahti%20hun.">
-⭐ Feedback WhatsApp पर दें
-</a>
 
 <br>
 
-<a class="btn fb"
+<a class="btn whatsapp"
+href="https://wa.me/919991436684?text=Namaste%2C%20main%20Farid%20CCTV%20Camera%20Service%20ke%20liye%20apna%20feedback%20dena%20chahta%2Fchahti%20hun.">
+⭐ WhatsApp पर Feedback दें
+</a>
+
+<a class="btn facebook"
 href="https://www.facebook.com/share/1DZHk2rUj5/"
 target="_blank">
-👍 Facebook Page पर जाएँ
+👍 Facebook Page
 </a>
 
 </div>
@@ -404,9 +738,14 @@ target="_blank">
 </section>
 
 
+<!-- FAQ -->
+
 <section class="faq">
 
-<h2>❓ Frequently Asked Questions</h2>
+<div class="section-title">
+<span>FAQ</span>
+<h2>❓ अक्सर पूछे जाने वाले सवाल</h2>
+</div>
 
 <details>
 <summary>क्या CCTV मोबाइल में देख सकते हैं?</summary>
@@ -432,7 +771,7 @@ target="_blank">
 <details>
 <summary>Package की price कैसे पता करें?</summary>
 <p>
-WhatsApp या Call Now पर संपर्क करके current price पूछ सकते हैं।
+WhatsApp या Call Now पर current price पूछ सकते हैं।
 </p>
 </details>
 
@@ -446,66 +785,87 @@ Farid CCTV Camera Service, Malai Road, Hathin, 121103.
 </section>
 
 
-<section class="contact">
+<!-- CONTACT -->
 
-<h2>📍 Contact Us</h2>
+<section>
 
-<div class="card">
+<div class="section-title">
+<span>Contact Us</span>
+<h2>📍 हमसे संपर्क करें</h2>
+</div>
 
-<h3>Farid CCTV Camera Service</h3>
+<div class="card contact-card">
 
-<p>
+<h3>
+Farid CCTV Camera Service
+</h3>
+
+<div class="contact-info">
+
 📍 Malai Road, Hathin, 121103
-</p>
+<br><br>
 
-<p>
 📞 <b>9991436684</b>
-</p>
 
-<a class="btn call"
-href="tel:9991436684">
+</div>
+
+<div class="buttons">
+
+<a class="btn gold" href="tel:9991436684">
 📞 Call करें
 </a>
 
-<a class="btn wa"
+<a class="btn whatsapp"
 href="https://wa.me/919991436684">
 💬 WhatsApp
 </a>
 
-<a class="btn map"
+<a class="btn maps"
 href="https://share.google/EBPyeqdiZFASnjt4Y"
 target="_blank">
 📍 Google Maps
 </a>
 
-<br>
-
-<a class="btn fb"
+<a class="btn facebook"
 href="https://www.facebook.com/share/1DZHk2rUj5/"
 target="_blank">
-👍 Facebook Follow करें
+👍 Facebook
 </a>
+
+</div>
 
 </div>
 
 </section>
 
 
+<!-- FLOATING WHATSAPP -->
+
+<a class="float-wa"
+href="https://wa.me/919991436684?text=Namaste%2C%20mujhe%20CCTV%20Camera%20ke%20baare%20mein%20jaankari%20chahiye."
+aria-label="WhatsApp">
+💬
+</a>
+
+
+<!-- FOOTER -->
+
 <footer>
 
 <b>Farid CCTV Camera Service</b>
 
-<br>
+<br><br>
 
-आपकी सुरक्षा, हमारी सेवा। 📹
+आपकी सुरक्षा, हमारी जिम्मेदारी। 📹
 
-<br>
+<br><br>
 
 <span class="small">
 Malai Road, Hathin, 121103 • 9991436684
 </span>
 
 </footer>
+
 
 </body>
 </html>
